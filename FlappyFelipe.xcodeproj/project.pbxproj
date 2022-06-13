@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D52683C2853DD21007F147B /* AnimationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D52683B2853DD21007F147B /* AnimationComponent.swift */; };
+		5D5DE8A728480E4B004ADC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DE8A628480E4B004ADC0A /* AppDelegate.swift */; };
+		5D5DE8AD28480E4B004ADC0A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DE8AC28480E4B004ADC0A /* GameScene.swift */; };
+		5D5DE8AF28480E4B004ADC0A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DE8AE28480E4B004ADC0A /* GameViewController.swift */; };
+		5D5DE8B228480E4B004ADC0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DE8B028480E4B004ADC0A /* Main.storyboard */; };
+		5D5DE8B428480E4D004ADC0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DE8B328480E4D004ADC0A /* Assets.xcassets */; };
+		5D5DE8B728480E4D004ADC0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DE8B528480E4D004ADC0A /* LaunchScreen.storyboard */; };
+		5D5DE8C128480E4D004ADC0A /* FlappyFelipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DE8C028480E4D004ADC0A /* FlappyFelipeTests.swift */; };
+		5D5DE8CB28480E4D004ADC0A /* FlappyFelipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DE8CA28480E4D004ADC0A /* FlappyFelipeUITests.swift */; };
+		5D5DE8CD28480E4D004ADC0A /* FlappyFelipeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5DE8CC28480E4D004ADC0A /* FlappyFelipeUITestsLaunchTests.swift */; };
+		5D5DE8E3284811D2004ADC0A /* RayResources in Resources */ = {isa = PBXBuildFile; fileRef = 5D5DE8E2284811D2004ADC0A /* RayResources */; };
+		5DADCAC02848F56000ED6A58 /* PlayerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCABF2848F56000ED6A58 /* PlayerEntity.swift */; };
+		5DADCAC22848F5A800ED6A58 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCAC12848F5A800ED6A58 /* SpriteComponent.swift */; };
+		5DADCAC42848F5D000ED6A58 /* EntityNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCAC32848F5D000ED6A58 /* EntityNode.swift */; };
+		5DADCAC62848F93400ED6A58 /* MovementComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DADCAC52848F93400ED6A58 /* MovementComponent.swift */; };
+		5DB7677E284D67CD00319F48 /* PlayingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7677D284D67CD00319F48 /* PlayingState.swift */; };
+		5DB76780284D67D900319F48 /* FallingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB7677F284D67D900319F48 /* FallingState.swift */; };
+		5DB76782284D67E400319F48 /* GameOverState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB76781284D67E400319F48 /* GameOverState.swift */; };
+		5DB7678B284D6FC800319F48 /* falling.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DB76784284D6FC700319F48 /* falling.wav */; };
+		5DB7678C284D6FC800319F48 /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DB76785284D6FC700319F48 /* coin.wav */; };
+		5DB7678D284D6FC800319F48 /* pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DB76786284D6FC700319F48 /* pop.wav */; };
+		5DB7678E284D6FC800319F48 /* whack.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DB76787284D6FC700319F48 /* whack.wav */; };
+		5DB7678F284D6FC800319F48 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DB76788284D6FC700319F48 /* ding.wav */; };
+		5DB76790284D6FC800319F48 /* flapping.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DB76789284D6FC700319F48 /* flapping.wav */; };
+		5DB76791284D6FC800319F48 /* hitGround.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5DB7678A284D6FC700319F48 /* hitGround.wav */; };
+		5DB76793284D750900319F48 /* MainMenuState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB76792284D750900319F48 /* MainMenuState.swift */; };
+		5DB76795284D751100319F48 /* TutorialState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB76794284D751100319F48 /* TutorialState.swift */; };
+		5DE0D10E284C64E9005F1CEA /* ObstacleEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE0D10D284C64E9005F1CEA /* ObstacleEntity.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D5DE8BD28480E4D004ADC0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5DE89B28480E4B004ADC0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D5DE8A228480E4B004ADC0A;
+			remoteInfo = FlappyFelipe;
+		};
+		5D5DE8C728480E4D004ADC0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5DE89B28480E4B004ADC0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D5DE8A228480E4B004ADC0A;
+			remoteInfo = FlappyFelipe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5D52683B2853DD21007F147B /* AnimationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationComponent.swift; sourceTree = "<group>"; };
+		5D5DE8A328480E4B004ADC0A /* FlappyFelipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyFelipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D5DE8A628480E4B004ADC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5D5DE8AC28480E4B004ADC0A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5D5DE8AE28480E4B004ADC0A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5D5DE8B128480E4B004ADC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D5DE8B328480E4D004ADC0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D5DE8B628480E4D004ADC0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D5DE8BC28480E4D004ADC0A /* FlappyFelipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyFelipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D5DE8C028480E4D004ADC0A /* FlappyFelipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyFelipeTests.swift; sourceTree = "<group>"; };
+		5D5DE8C628480E4D004ADC0A /* FlappyFelipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyFelipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D5DE8CA28480E4D004ADC0A /* FlappyFelipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyFelipeUITests.swift; sourceTree = "<group>"; };
+		5D5DE8CC28480E4D004ADC0A /* FlappyFelipeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyFelipeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D5DE8E2284811D2004ADC0A /* RayResources */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RayResources; path = "../../../../Downloads/FlappyFelipe-02-GettingStarted/RayResources"; sourceTree = "<group>"; };
+		5DADCABF2848F56000ED6A58 /* PlayerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerEntity.swift; sourceTree = "<group>"; };
+		5DADCAC12848F5A800ED6A58 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
+		5DADCAC32848F5D000ED6A58 /* EntityNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityNode.swift; sourceTree = "<group>"; };
+		5DADCAC52848F93400ED6A58 /* MovementComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementComponent.swift; sourceTree = "<group>"; };
+		5DB7677D284D67CD00319F48 /* PlayingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingState.swift; sourceTree = "<group>"; };
+		5DB7677F284D67D900319F48 /* FallingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallingState.swift; sourceTree = "<group>"; };
+		5DB76781284D67E400319F48 /* GameOverState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverState.swift; sourceTree = "<group>"; };
+		5DB76784284D6FC700319F48 /* falling.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = falling.wav; sourceTree = "<group>"; };
+		5DB76785284D6FC700319F48 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin.wav; sourceTree = "<group>"; };
+		5DB76786284D6FC700319F48 /* pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pop.wav; sourceTree = "<group>"; };
+		5DB76787284D6FC700319F48 /* whack.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whack.wav; sourceTree = "<group>"; };
+		5DB76788284D6FC700319F48 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
+		5DB76789284D6FC700319F48 /* flapping.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flapping.wav; sourceTree = "<group>"; };
+		5DB7678A284D6FC700319F48 /* hitGround.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hitGround.wav; sourceTree = "<group>"; };
+		5DB76792284D750900319F48 /* MainMenuState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuState.swift; sourceTree = "<group>"; };
+		5DB76794284D751100319F48 /* TutorialState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialState.swift; sourceTree = "<group>"; };
+		5DE0D10D284C64E9005F1CEA /* ObstacleEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleEntity.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D5DE8A028480E4B004ADC0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5DE8B928480E4D004ADC0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5DE8C328480E4D004ADC0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D5DE89A28480E4B004ADC0A = {
+			isa = PBXGroup;
+			children = (
+				5D5DE8A528480E4B004ADC0A /* FlappyFelipe */,
+				5D5DE8BF28480E4D004ADC0A /* FlappyFelipeTests */,
+				5D5DE8C928480E4D004ADC0A /* FlappyFelipeUITests */,
+				5D5DE8A428480E4B004ADC0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5D5DE8A428480E4B004ADC0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D5DE8A328480E4B004ADC0A /* FlappyFelipe.app */,
+				5D5DE8BC28480E4D004ADC0A /* FlappyFelipeTests.xctest */,
+				5D5DE8C628480E4D004ADC0A /* FlappyFelipeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D5DE8A528480E4B004ADC0A /* FlappyFelipe */ = {
+			isa = PBXGroup;
+			children = (
+				5DB76783284D6FBA00319F48 /* Sounds */,
+				5DB7677C284D678600319F48 /* GameState */,
+				5DADCABE2848F55000ED6A58 /* Components */,
+				5DADCABD2848F54400ED6A58 /* Entities */,
+				5D5DE8A628480E4B004ADC0A /* AppDelegate.swift */,
+				5D5DE8AC28480E4B004ADC0A /* GameScene.swift */,
+				5D5DE8AE28480E4B004ADC0A /* GameViewController.swift */,
+				5D5DE8B028480E4B004ADC0A /* Main.storyboard */,
+				5D5DE8B328480E4D004ADC0A /* Assets.xcassets */,
+				5D5DE8B528480E4D004ADC0A /* LaunchScreen.storyboard */,
+				5D5DE8E2284811D2004ADC0A /* RayResources */,
+			);
+			path = FlappyFelipe;
+			sourceTree = "<group>";
+		};
+		5D5DE8BF28480E4D004ADC0A /* FlappyFelipeTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D5DE8C028480E4D004ADC0A /* FlappyFelipeTests.swift */,
+			);
+			path = FlappyFelipeTests;
+			sourceTree = "<group>";
+		};
+		5D5DE8C928480E4D004ADC0A /* FlappyFelipeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5D5DE8CA28480E4D004ADC0A /* FlappyFelipeUITests.swift */,
+				5D5DE8CC28480E4D004ADC0A /* FlappyFelipeUITestsLaunchTests.swift */,
+			);
+			path = FlappyFelipeUITests;
+			sourceTree = "<group>";
+		};
+		5DADCABD2848F54400ED6A58 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5DADCABF2848F56000ED6A58 /* PlayerEntity.swift */,
+				5DE0D10D284C64E9005F1CEA /* ObstacleEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5DADCABE2848F55000ED6A58 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5DADCAC12848F5A800ED6A58 /* SpriteComponent.swift */,
+				5DADCAC32848F5D000ED6A58 /* EntityNode.swift */,
+				5DADCAC52848F93400ED6A58 /* MovementComponent.swift */,
+				5D52683B2853DD21007F147B /* AnimationComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5DB7677C284D678600319F48 /* GameState */ = {
+			isa = PBXGroup;
+			children = (
+				5DB7677D284D67CD00319F48 /* PlayingState.swift */,
+				5DB7677F284D67D900319F48 /* FallingState.swift */,
+				5DB76781284D67E400319F48 /* GameOverState.swift */,
+				5DB76792284D750900319F48 /* MainMenuState.swift */,
+				5DB76794284D751100319F48 /* TutorialState.swift */,
+			);
+			path = GameState;
+			sourceTree = "<group>";
+		};
+		5DB76783284D6FBA00319F48 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5DB76785284D6FC700319F48 /* coin.wav */,
+				5DB76788284D6FC700319F48 /* ding.wav */,
+				5DB76784284D6FC700319F48 /* falling.wav */,
+				5DB76789284D6FC700319F48 /* flapping.wav */,
+				5DB7678A284D6FC700319F48 /* hitGround.wav */,
+				5DB76786284D6FC700319F48 /* pop.wav */,
+				5DB76787284D6FC700319F48 /* whack.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D5DE8A228480E4B004ADC0A /* FlappyFelipe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D5DE8D028480E4D004ADC0A /* Build configuration list for PBXNativeTarget "FlappyFelipe" */;
+			buildPhases = (
+				5D5DE89F28480E4B004ADC0A /* Sources */,
+				5D5DE8A028480E4B004ADC0A /* Frameworks */,
+				5D5DE8A128480E4B004ADC0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlappyFelipe;
+			productName = FlappyFelipe;
+			productReference = 5D5DE8A328480E4B004ADC0A /* FlappyFelipe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5D5DE8BB28480E4D004ADC0A /* FlappyFelipeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D5DE8D328480E4D004ADC0A /* Build configuration list for PBXNativeTarget "FlappyFelipeTests" */;
+			buildPhases = (
+				5D5DE8B828480E4D004ADC0A /* Sources */,
+				5D5DE8B928480E4D004ADC0A /* Frameworks */,
+				5D5DE8BA28480E4D004ADC0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D5DE8BE28480E4D004ADC0A /* PBXTargetDependency */,
+			);
+			name = FlappyFelipeTests;
+			productName = FlappyFelipeTests;
+			productReference = 5D5DE8BC28480E4D004ADC0A /* FlappyFelipeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5D5DE8C528480E4D004ADC0A /* FlappyFelipeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D5DE8D628480E4D004ADC0A /* Build configuration list for PBXNativeTarget "FlappyFelipeUITests" */;
+			buildPhases = (
+				5D5DE8C228480E4D004ADC0A /* Sources */,
+				5D5DE8C328480E4D004ADC0A /* Frameworks */,
+				5D5DE8C428480E4D004ADC0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D5DE8C828480E4D004ADC0A /* PBXTargetDependency */,
+			);
+			name = FlappyFelipeUITests;
+			productName = FlappyFelipeUITests;
+			productReference = 5D5DE8C628480E4D004ADC0A /* FlappyFelipeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D5DE89B28480E4B004ADC0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					5D5DE8A228480E4B004ADC0A = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					5D5DE8BB28480E4D004ADC0A = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 5D5DE8A228480E4B004ADC0A;
+					};
+					5D5DE8C528480E4D004ADC0A = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 5D5DE8A228480E4B004ADC0A;
+					};
+				};
+			};
+			buildConfigurationList = 5D5DE89E28480E4B004ADC0A /* Build configuration list for PBXProject "FlappyFelipe" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D5DE89A28480E4B004ADC0A;
+			productRefGroup = 5D5DE8A428480E4B004ADC0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D5DE8A228480E4B004ADC0A /* FlappyFelipe */,
+				5D5DE8BB28480E4D004ADC0A /* FlappyFelipeTests */,
+				5D5DE8C528480E4D004ADC0A /* FlappyFelipeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D5DE8A128480E4B004ADC0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5DE8E3284811D2004ADC0A /* RayResources in Resources */,
+				5D5DE8B228480E4B004ADC0A /* Main.storyboard in Resources */,
+				5DB7678B284D6FC800319F48 /* falling.wav in Resources */,
+				5DB7678E284D6FC800319F48 /* whack.wav in Resources */,
+				5DB7678D284D6FC800319F48 /* pop.wav in Resources */,
+				5DB76791284D6FC800319F48 /* hitGround.wav in Resources */,
+				5DB7678C284D6FC800319F48 /* coin.wav in Resources */,
+				5DB7678F284D6FC800319F48 /* ding.wav in Resources */,
+				5DB76790284D6FC800319F48 /* flapping.wav in Resources */,
+				5D5DE8B428480E4D004ADC0A /* Assets.xcassets in Resources */,
+				5D5DE8B728480E4D004ADC0A /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5DE8BA28480E4D004ADC0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5DE8C428480E4D004ADC0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D5DE89F28480E4B004ADC0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB76793284D750900319F48 /* MainMenuState.swift in Sources */,
+				5D5DE8AD28480E4B004ADC0A /* GameScene.swift in Sources */,
+				5DE0D10E284C64E9005F1CEA /* ObstacleEntity.swift in Sources */,
+				5DB76782284D67E400319F48 /* GameOverState.swift in Sources */,
+				5D52683C2853DD21007F147B /* AnimationComponent.swift in Sources */,
+				5DADCAC62848F93400ED6A58 /* MovementComponent.swift in Sources */,
+				5DADCAC22848F5A800ED6A58 /* SpriteComponent.swift in Sources */,
+				5DB76795284D751100319F48 /* TutorialState.swift in Sources */,
+				5D5DE8AF28480E4B004ADC0A /* GameViewController.swift in Sources */,
+				5D5DE8A728480E4B004ADC0A /* AppDelegate.swift in Sources */,
+				5DADCAC42848F5D000ED6A58 /* EntityNode.swift in Sources */,
+				5DB7677E284D67CD00319F48 /* PlayingState.swift in Sources */,
+				5DB76780284D67D900319F48 /* FallingState.swift in Sources */,
+				5DADCAC02848F56000ED6A58 /* PlayerEntity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5DE8B828480E4D004ADC0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5DE8C128480E4D004ADC0A /* FlappyFelipeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5DE8C228480E4D004ADC0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5DE8CB28480E4D004ADC0A /* FlappyFelipeUITests.swift in Sources */,
+				5D5DE8CD28480E4D004ADC0A /* FlappyFelipeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D5DE8BE28480E4D004ADC0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D5DE8A228480E4B004ADC0A /* FlappyFelipe */;
+			targetProxy = 5D5DE8BD28480E4D004ADC0A /* PBXContainerItemProxy */;
+		};
+		5D5DE8C828480E4D004ADC0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D5DE8A228480E4B004ADC0A /* FlappyFelipe */;
+			targetProxy = 5D5DE8C728480E4D004ADC0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5D5DE8B028480E4B004ADC0A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D5DE8B128480E4B004ADC0A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5D5DE8B528480E4D004ADC0A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D5DE8B628480E4D004ADC0A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D5DE8CE28480E4D004ADC0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5D5DE8CF28480E4D004ADC0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D5DE8D128480E4D004ADC0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U2VK48STRA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.project.FlappyFelipe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D5DE8D228480E4D004ADC0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U2VK48STRA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.practice.project.FlappyFelipe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5D5DE8D428480E4D004ADC0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.courses.FlappyFelipeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlappyFelipe.app/FlappyFelipe";
+			};
+			name = Debug;
+		};
+		5D5DE8D528480E4D004ADC0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.courses.FlappyFelipeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlappyFelipe.app/FlappyFelipe";
+			};
+			name = Release;
+		};
+		5D5DE8D728480E4D004ADC0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.courses.FlappyFelipeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlappyFelipe;
+			};
+			name = Debug;
+		};
+		5D5DE8D828480E4D004ADC0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.courses.FlappyFelipeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlappyFelipe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D5DE89E28480E4B004ADC0A /* Build configuration list for PBXProject "FlappyFelipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5DE8CE28480E4D004ADC0A /* Debug */,
+				5D5DE8CF28480E4D004ADC0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D5DE8D028480E4D004ADC0A /* Build configuration list for PBXNativeTarget "FlappyFelipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5DE8D128480E4D004ADC0A /* Debug */,
+				5D5DE8D228480E4D004ADC0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D5DE8D328480E4D004ADC0A /* Build configuration list for PBXNativeTarget "FlappyFelipeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5DE8D428480E4D004ADC0A /* Debug */,
+				5D5DE8D528480E4D004ADC0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D5DE8D628480E4D004ADC0A /* Build configuration list for PBXNativeTarget "FlappyFelipeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5DE8D728480E4D004ADC0A /* Debug */,
+				5D5DE8D828480E4D004ADC0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D5DE89B28480E4B004ADC0A /* Project object */;
+}
